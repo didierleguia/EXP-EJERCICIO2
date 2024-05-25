@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 1</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<body>
+    
+<main>
+
+    <header>
+        <img src="img/logo-amarillo2.png" alt="logo" height="70px">
+    </header>
+    <h1>2.	Un trabajador de cierta empresa recibe un sueldo mensual que está determinado por el número de horas que trabaja durante el mes y el valor en soles por hora. Asimismo, el valor por hora se incrementa en un 60% para todas las horas a partir de las 50 horas. Calcule y muestre el sueldo que le corresponde al trabajador de esta empresa.
+    </h1>
+    <div id="solucion">
+
+        <script>
+            //Declaracion de variables//
+            var htrabajadas,sueldo,hextra,pporh,pporhextra;
+            
+            //Fase de lectura / estructura//
+            htrabajadas=parseInt(prompt("Ingrese el numero de horas trabajadas"));
+            pporh=parseInt(prompt("Ingrese el precio por hora"));
+            
+           //Fase procesamientos de datos//  
+            if (htrabajadas>50) {
+                hextra=htrabajadas-50;
+                pporhextra=pporh * 1.6;
+                sueldo=(50 * pporh)+(hextra * pporhextra)
+            } else {
+                sueldo=htrabajadas * pporh
+            }
+           
+            //Fase de salida//
+            document.write("==========SUELDO DEL TRABAJADOR========"+"<br>");
+            document.write("Horas trabajadas: "+htrabajadas+"<br>");
+            document.write("Precio por hora: "+pporh+"<br>");
+            document.write("Precio por hora extra: "+pporhextra+"<br>");
+            document.write("Horas extra: "+hextra+"<br>");
+            document.write("El sueldo del trabajador es: "+sueldo+"<br>"); 
+
+        </script>
+    </div>
+   
+</main>
+
+
+</body>
+</html>
